@@ -1,11 +1,16 @@
-using System;
-using System.Collections.Generic;
-
-class Program
-{
-    static void Main(string[] args)
+static char GetFirstUniqueCharacter(string input)
     {
-        Console.WriteLine("Enter a string:");
-        string input = Console.ReadLine();
+        Dictionary<char, int> characterCount = new Dictionary<char, int>();
+
+        foreach (char c in input)
+        {
+            if (characterCount.ContainsKey(c))
+            {
+                characterCount[c]++;
+            }
+            else
+            {
+                characterCount[c] = 1;
+            }
+        }
     }
-}
