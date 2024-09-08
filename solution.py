@@ -1,4 +1,6 @@
-class Stream:
-    def __init__(self):
-        self.stream = []
-        self.count = {}
+def add(self, char):
+        self.stream.append(char)
+        if char in self.count:
+            self.count[char] += 1
+        else:
+            self.count[char] = 1
